@@ -1,6 +1,7 @@
 ARG PIHOLE_VERSION
 FROM pihole/pihole:${PIHOLE_VERSION:-latest}
-RUN apt update && apt install -y unbound
+RUN apt update
+RUN apt install -y unbound
 
 COPY lighttpd-external.conf /etc/lighttpd/external.conf 
 COPY unbound-pihole.conf /etc/unbound/unbound.conf.d/pi-hole.conf
