@@ -7,7 +7,7 @@ volumes:
 services:
   pihole:
     container_name: pihole-unbound
-    image: pihole-unbound:latest
+    image: cryptotar/pihole-unbound:latest
     hostname: ${HOSTNAME}
     domainname: ${DOMAIN_NAME}
     ports:
